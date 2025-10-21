@@ -81,12 +81,14 @@ header {
 }
 
 /* ========== NAVIGATION ========== */
+/* ========== NAVIGATION ========== */
 nav {
   background-color: rgba(0, 0, 0, 0.85);
   text-align: center;
   padding: 12px 16px;
   margin: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  position: relative; /* Needed for flag position */
 }
 
 nav a {
@@ -102,6 +104,31 @@ nav a:hover {
   color: var(--accent-yellow);
 }
 
+.language-switcher {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.flag-btn {
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flag-btn:hover {
+  transform: scale(1.1);
+}
+
+.flag-icon {
+  width: 32px;
+  height: auto;
+  display: block;
+}
 /* ========== HERO SECTION ========== */
 /* Use min-height that subtracts header + nav to avoid overflow/extra page scroll */
 .hero {

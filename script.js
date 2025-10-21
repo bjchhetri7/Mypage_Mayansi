@@ -1,3 +1,11 @@
+const flagButtons = document.querySelectorAll('.flag-btn');
+
+flagButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const page = btn.getAttribute('data-page');
+    window.location.href = page;
+  });
+});
 
 
 // Reservation form
